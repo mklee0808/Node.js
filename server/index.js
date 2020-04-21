@@ -17,6 +17,7 @@ db.on('error', err => {
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(cors())
+app.use('/api', addrsRouter)
 
 app.listen(port, function(){
     console.log("서버 온" + port)
